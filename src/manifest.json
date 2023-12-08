@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "<NAME>",
+  "short_name": "<SHORT NAME>",
+  "version": "0.0.0",
+  "description": "<DESCRIPTION>",
+  "permissions": [
+    "sidePanel"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; frame-src https://<AUTH_NAME>.auth0.com;"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": {
+    "default_title": "<TITLE>"
+  },
+  "icons": {
+    "16": "assets/icon/icon16.png",
+    "32": "assets/icon/icon32.png",
+    "48": "assets/icon/icon48.png",
+    "128": "assets/icon/icon128.png"
+  },
+  "key": "<Extension Key>"
+}
