@@ -100,9 +100,9 @@ Add `chrome` in `tsconfig.app.json`
         },
 ```
 
-- `outputHashing` is set to `none` to let the file names as they are.
+Be aware that the file names include a hash, a feature that enhances cache management for web applications. However this feature could add unnecessary complexity to our build process. This is because we must declare the names of background and content scripts in the `manifest.json` file, and having consistent, unchanging file names simplifies this task. `outputHashing` is set to `none` to let the file names as they are.
 
-4. Create the file `build-chrome-extension.ts` in `./scripts` to build the package
+4. Create the file `build-chrome-extension.ts` in `./scripts` to build the package with `background.js` inside
 
 ```ts
 const esbuild = require('esbuild');
