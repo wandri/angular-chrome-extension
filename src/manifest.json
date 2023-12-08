@@ -7,9 +7,6 @@
   "permissions": [
     "sidePanel"
   ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; frame-src https://<AUTH_NAME>.auth0.com;"
-  },
   "background": {
     "service_worker": "background.js"
   },
@@ -24,6 +21,5 @@
     "32": "assets/icon/icon32.png",
     "48": "assets/icon/icon48.png",
     "128": "assets/icon/icon128.png"
-  },
-  "key": "<Extension Key>"
+  }
 }
