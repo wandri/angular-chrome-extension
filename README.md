@@ -81,7 +81,7 @@ Add `chrome` in `tsconfig.app.json`
         ...
         "assets": [
           ...
-          "apps/chrome-extension/src/manifest.json"
+          "./src/manifest.json"
         ],
         "optimization": {
           "scripts": true,
