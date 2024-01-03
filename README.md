@@ -130,6 +130,19 @@ async function buildBackgroundScript(): Promise<void> {
     outdir: 'dist/angular-chrome-extension/browser/'
   });
 }
+
+// Build process
+async function buildChromeExtension(): Promise<void> {
+  try {
+    await buildAngularApp();
+    await buildBackgroundScript();
+    console.info('Build completed successfully.');
+  } catch (error) {
+    console.error('Build failed:', error);
+  }
+}
+
+buildChromeExtension();
 ```
 
 5. Update `package.json` to include the build script
